@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="file" id="fileToLoad" name="image" value="Get file"/>
+    <button onclick="loadFileAsText(event)">Load Selected File</button>
+    <p id="inputTextToSave"></p>
+    <script>
+        function loadFileAsText(e){
+            e.preventDefault();
+            var fileToLoad = document.getElementById("fileToLoad").files[0];
+            console.log(fileToLoad);
+            // var fileReader = new FileReader();
+            // fileReader.onload = function(fileLoadedEvent){
+            // var textFromFileLoaded = fileLoadedEvent.target.result;
+            // document.getElementById("inputTextToSave").value = textFromFileLoaded;
+            // };
+
+            // fileReader.readAsText(fileToLoad, "UTF-8");
+        }
+    </script>
+</body>
+</html>
